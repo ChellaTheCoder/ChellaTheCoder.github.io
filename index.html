@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title id="pageTitle"></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- To import  bootstrap css-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- To import font awesome css -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- To import custom game css -->
+    <link rel="stylesheet" href="game.css">
+    <!-- To import jquery to use in JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- To import bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!-- To import custom game JS-->
+    <script src="game.js"></script>
+</head>
+<body>
+    <div id="madTruckerDiv">
+        <h2 class="madTruckerTitleClass">Mad Trucker</h2>
+        <div id="resetButton">
+            <button id="resetBtnID" type="button" class="btn btn-warning">Reset</button>
+        </div>
+        <div class="alert alert-success" role="alert">
+        </div>
+        <!-- To show race container -->
+        <div class="container">
+        </div>
+        <div class="buttongroups">
+            <button id="placeBet" type="button" class="btn btn-primary" data-toggle="modal"
+                data-target="#placeBetModal" onclick="placeBet()">Place Bet</button>
+            <button id="startRace" type="button" class="btn btn-success" onclick="myTruckRace()" >Start
+                Race</button>
+            <!-- To show user agent -->
+            <div class="userAgent">
+                <span class="userIntitalFunds"></span>
+                <span class="fa fa-user-secret" aria-hidden="true"></span>
+                <span class="userName"></span>
+            </div>
+        </div>
+
+        <!--To Place Bet we need to open Bet modal form  -->
+        <div class="modal fade" id="placeBetModal" tabindex="-1" role="dialog"
+            aria-labelledby="placeBetModalTitle" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Place Bet</h5>
+                        <button type="button" class="close" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="fieldContainer"></div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="alert-primary bet-alert" role="alert">
+                            
+                        </div>
+                        <button id="betBtn" type="submit" class="btn btn-primary" onclick="postingBetData()">Bet</button>
+                        <button id="betCancel" type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Game setup page form-->
+    <div id="gameSetupID" >
+        <h2 id="gameSetupTitle">Game Setup</h2>
+        <form id="gameSetupForm">
+            <div class="form-group">
+                <label for="playerName">Player Name</label>
+                <input type="text" class="form-control" id="playerName" placeholder="bhanu chella" value="bhanu" required>
+            </div>
+            <div class="form-group">
+                <label for="noofTruckers">No Of truckers</label>
+                <select class="form-control" id="noofTruckers" required>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="intialFunds">Intial Funds</label>
+                 <input type="number" class="form-control currency" id="intialFunds" min="01.00" max="2500.00" value="12.01"
+                     required>
+            </div>
+            <div id="startGameID"  class="form-group">
+                <button type="button" class="btn btn-success" onclick="startGame()">Start Game</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

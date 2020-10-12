@@ -1,0 +1,256 @@
+/* Font family for whole car game pages */
+* {
+    font-family: cursive;
+}
+/* Style for fontawesome truck */
+.fa-truck {
+    font-size: 50px;
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+}
+/* Style for fontawesome useragent */
+.fa-user-secret {
+    font-size: 64px;
+    color: brown;
+}
+/* Style for track */
+.track {
+    height: auto;
+    background-image: url('./assets/track.png');
+}
+/* Style for page container */
+.container {
+    margin: 62px auto;
+    padding: 0 50px 0 0;
+    width: 80%;
+    background: url('./assets/racing-stripes.jpg') repeat-y 100% 0;
+}
+/* Style for i tag in container */
+i {
+    width: 80px;
+    height: 50px;
+    font-weight: bold;
+    position: relative;
+}
+/* Style for animated class dyanmically append */
+.animated {
+    animation: myTruckRace 7s forwards;
+}
+/* Style for i tag hover */
+i:hover {
+    animation-play-state: running;
+}
+/* Styles for trucks while animation started */
+#truck0.active{
+    animation-timing-function: linear;
+}
+
+#truck1.active {
+    animation-timing-function: ease-out;
+}
+
+#truck2.active {
+    animation-timing-function: ease-in;
+}
+
+#truck3.active {
+    animation-timing-function: ease-out;
+}
+
+#truck4.active {
+    animation-timing-function: ease-in-out;
+}
+
+#truck5.active {
+    animation-timing-function: ease-in;
+}
+/* End */
+/* Style for all trucks */
+#truck0 {
+    color: green;
+}
+#truck1 {
+    color: red;
+}
+#truck2 {
+    color: yellow;
+}
+#truck3 {
+    color: blue;
+}
+#truck4 {
+    color: orange;
+}
+#truck5 {
+    color:#1f256f;
+}
+/* End */
+
+/* Style ketframes for truck race */
+@keyframes myTruckRace {
+    from {
+        left: 0%;
+    }
+
+    to {
+        left: 95%;
+    }
+}
+/* End */
+
+/* Code for background color change of game page */
+#madTruckerDiv {
+    -webkit-animation: bgcolorchange 10s infinite;
+    /* Chrome, Safari, Opera */
+    animation: 10s infinite bgcolorchange;
+}
+/* Keyframed styles for page background */
+@keyframes bgcolorchange {
+    0% {
+        background-color: red;
+    }
+
+    25% {
+        background-color: green;
+    }
+
+    50% {
+        background-color: yellow;
+    }
+
+    75% {
+        background-color: yellow;
+    }
+
+    100% {
+        background-color: red;
+    }
+}
+/* Chrome, Safari, Opera */
+@-webkit-keyframes bgcolorchange {
+    0% {
+        background: red;
+    }
+
+    25% {
+        background: yellow;
+    }
+
+    75% {
+        background: green;
+    }
+
+    100% {
+        background: blue;
+    }
+}
+/* End */
+/* Style for madTruckerTitleClass */
+.madTruckerTitleClass {
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+    color: white;
+    font-weight: bold;
+    font-family: cursive;
+}
+
+/* Style for useragent */
+.userAgent {
+    float: right;
+}
+/* Styles for buttongroups */
+.buttongroups {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: flow-root;
+}
+/* Style for Reset button */
+#resetButton {
+    text-align: center;
+    padding: 10px;
+}
+
+/* Style for currency class */
+.currency {
+    padding-left: 12px;
+}
+/* Style for currency symbol */
+.currency-symbol {
+    position: absolute;
+    padding: 7px 4px;
+}
+/* Style for modal dilaogs header close class */
+.modal-header .close {
+    display: none;
+}
+/* Style for game setup */
+#gameSetupID {
+    margin: 90px auto;
+    padding: 0 50px 0 0;
+    width: 80%;
+    border: 5px solid #31708f;
+    border-radius: 30px 30px 30px 30px;
+}
+/* Style for gameSetupTitle */
+#gameSetupTitle {
+    text-align: center;
+}
+/* Style for gameSetupForm */
+#gameSetupForm {
+    padding: 10px;
+    margin-left: 28px;
+}
+/* Style for startGameID */
+#startGameID {
+    text-align: right;
+}
+/* Style for userName */
+.userName {
+    display: block;
+    padding-left: 38%;
+    font-weight: bold;
+}
+/* Style for madTruckerDiv */
+#madTruckerDiv {
+    border: 5px solid #31708f;
+    padding: 10px;
+    border-radius: 30px 30px 30px 30px;
+}
+/* Style for modaldialog title */
+.modal-title {
+    font-weight: bold;
+    font-size: large;
+}
+/* Style for userintial funds & useraname */
+.userIntitalFunds,
+.userName {
+    color: white;
+    font-weight: bold;
+}
+/* Style for alert while successfully posting */
+.alert-success {
+    font-size: 24px;
+    text-align: center;
+    color: red;
+}
+/* Style for truckinfobet class */
+.truckInfoBetClass {
+    font-size: 8px;
+    color: white;
+    -webkit-transform: rotateY(200deg) !important;
+    display: inline-block;
+}
+/* Style for verticalLine */
+.verticalLine {
+    border-right: 3px solid white;
+}
+/* Style for startGameBar */
+.startGameBar {
+    border-right: 3px solid white;
+    padding-top: 25px;
+    padding-bottom: 3px;
+}
