@@ -1,0 +1,186 @@
+/**********************************************
+
+Template Name:  Alo - Personal Portfolio Template
+Author: ThemeFusionBD
+Version: 1.0
+Design and Developed by: ThemeFusionBD
+
+NOTE: This is responsive stylesheet of the template, This file contains the styling for various devices like mobile phone, tablet, laptop etc.
+
+*************************************************/
+
+/* Medium Layout: 1280px. */
+@media only screen and (min-width: 992px) and (max-width: 1200px) { 
+  
+    
+}
+/* Tablet Layout: 768px. */
+@media only screen and (min-width: 768px) and (max-width: 991px) { 
+  .welcome-text h1 {
+  font-size: 80px;
+}  
+.about-text {
+  margin-top: 40px;
+}
+
+.full-adress {
+    margin-top: 60px;
+    margin-left: 0px;
+}
+
+    
+    
+    
+}
+/* Mobile Layout lower than: 320px. */
+@media only screen and (max-width: 767px) { 
+    
+
+/* HEADER AREA */  
+.custom-navbar{
+    padding: 12px 0;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    background: #000;
+}
+.logo a{
+    margin-top: 10px;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+.main-menu ul.navbar-nav {
+    float: left;
+}
+.main-menu ul.navbar-nav li a{
+    padding: 10px 5px;
+}
+.main-menu ul.nav.navbar-nav li.active:before{
+    display: none;
+}
+.navbar-collapse {
+  border-top: 1px solid transparent;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4) inset;
+  margin-top: 15px;
+}
+
+  .navbar-toggle {
+  float: none;
+  margin: 0;
+  padding: 9px;
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+}
+    .navbar-header .navbar-toggle .icon-bar {
+  background: none repeat scroll 0 0 #fff;
+}
+.navbar-header {
+    display: inline-block;
+    float: right;
+    margin-top: 6px;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+.custom-navbar.top-nav-collapse .main-menu ul.navbar-nav li a{padding: 10px 5px;}
+.custom-navbar.top-nav-collapse .navbar-collapse {
+  border-top: 1px solid transparent;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4) inset;
+  margin-top: 15px;
+}
+.custom-navbar.top-nav-collapse .navbar-toggle{
+    float: none;
+    margin: 0;
+    padding: 9px;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+    .custom-navbar.top-nav-collapse .navbar-toggle .icon-bar {
+  background: none repeat scroll 0 0 #fff;
+}
+    .custom-navbar.top-nav-collapse .logo a {
+  color: #fff;
+  margin-top: 6px;
+}
+   .custom-navbar.top-nav-collapse .navbar-header {
+  
+  margin-top: 0;
+}
+    .custom-navbar.top-nav-collapse {
+  padding: 12px 0;
+}
+.mobile-menu-activated ul.nav.navbar-nav{}
+.mobile-menu-activated ul.nav.navbar-nav li{display: block;text-align: left;}
+.mobile-menu-activated ul.nav.navbar-nav li a{}
+.main-menu ul.navbar-nav{
+    text-align: left !important;
+    display: block;
+}
+    
+    
+    
+.welcome-text h1 {
+  font-size: 32px;
+}
+.welcome-text h3 {
+  color: #fff;
+font-size: 20px;
+letter-spacing: 2px;
+line-height: 26px;
+}
+     
+  .section-padding{
+    padding:  80px 0px;
+}
+    .section-title {
+  margin-bottom: 60px;
+}
+.author-image {
+    margin-bottom: 0px;
+}
+    .about-text {
+  margin-top: 40px;
+}
+    .about-text .btn{
+     margin-right: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+    .service-space{
+    height: 0px;
+}
+.single-service {
+    margin-bottom: 50px;
+}
+
+    .full-adress {
+  margin-top: 60px;
+    margin-left: 0px;
+}
+
+
+.footer{
+    
+}
+.footer-text P{
+    font-size: 14px;
+    }
+    
+    
+}
+
+
+/* Wide Mobile Layout: 480px. */
+@media only screen and (min-width: 480px) and (max-width: 767px) { 
+    
+.mobile-menu-activated ul.nav.navbar-nav li a{padding: 10px 5px;}
+    
+.welcome-text h1 {
+    font-size: 55px;
+}
+.welcome-text h3 {
+    
+}
+
+
+    
+}
+

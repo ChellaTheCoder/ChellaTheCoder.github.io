@@ -1,0 +1,761 @@
+ /*************************************
+
+Template Name: Alo - One Page Personal Portfolio Template
+Author: ThemeFusionBD
+Version: 1.0
+Design and Developed by: ThemeFusionBD
+
+NOTE: This is main stylesheet of the template.
+
+****************************************/
+
+
+/*================================================
+            Table of contents  
+==================================================
+ 
+0. BASE CSS
+1. PRELOADER
+2. SECTION TITLE AND SECTION PADDING
+3. INTRO SECTION
+    a. HEADER AREA
+    b. WELCOME AREA
+4. ABOUT SECTION
+5. SERVICES SECTION
+6. QUOTES AREA
+7. WORK SECTION
+8. CONTACT INFO SECTION
+9. FOOTER SECTION
+
+====================================================
+            End table content 
+===================================================*/
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700,900);
+
+
+
+/*================================================
+             0 BASE CSS
+==================================================*/
+.alignleft {
+    float: left;
+    margin-right: 15px;
+}
+.alignright {
+    float: right;
+    margin-left: 15px;
+}
+.aligncenter {
+    display: block;
+    margin: 0 auto 15px;
+}
+a:focus { outline: 0 solid }
+img {
+    max-width: 100%;
+    height: auto;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 0 15px;
+    font-weight: 700;
+    color: #000;
+}
+p{
+    color: #444;
+}
+html,
+body { height: 100% }
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+    line-height: 24px;
+}
+a:hover { text-decoration: none }
+
+/* Remove Chrome Input Field's Unwanted Yellow Background Color */
+input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+}
+
+
+.main-menu ul.navbar-nav li.active a.theme-color{
+    color: #DC143C;
+}
+.custom-navbar.top-nav-collapse .main-menu ul.nav.navbar-nav li.active a.theme-color{
+    color: #DC143C;
+   
+}
+.btn.theme-color, a.btn.theme-color{
+    background: #DC143C;
+    color: #fff;
+}
+.btn.theme-color.btn-effect.disabled:hover {
+    color: #fff;
+}
+
+
+/*========================
+    DEMO PANEL CSS
+=========================*/
+.demo_panel_box{
+    position: fixed;
+    width: 180px;
+    height: 135px;
+    background: #e6e6e6;
+    left: -180px;
+    top: 180px;
+    text-align: center;
+    z-index: 99;
+}
+.color_panel_box {
+  margin-top: 20px;
+  padding: 0 12px;
+}
+.spiner_button{
+    height: 50px;
+    width: 50px;
+    background: #fff;
+    position: absolute;
+    display: block;
+    right: -50px;;
+    top: 0px;
+    z-index: 99;
+    text-align: center;
+    font-size: 30px;
+    color: #000;
+    padding-top: 10px;
+    cursor: pointer;
+    border-radius: 0 10px 10px 0;
+    box-shadow:  0 0 15px rgba(0, 0, 0, 0.2);
+}
+.color_panel_box span{
+    width: 30px;
+    height: 30px;
+    margin-left: 15px;
+    display: block;
+    float: left;
+    margin-bottom: 15px;
+    cursor: pointer;
+    
+}
+.color_panel_box span.red_color{
+    background-color: #DC143C;
+}
+.color_panel_box span.blue_color{
+    background-color: #304fff;
+}
+.color_panel_box span.yellow_color{
+    background-color: #ffe162;
+}
+.color_panel_box span.purple_color{
+    background-color: #663399;
+}
+.color_panel_box span.pink_color{
+    background-color: #D2527F;
+}
+.color_panel_box span.green_color{
+    background-color: #44b272;
+}
+
+/*======= yellow =========*/
+.yellow_color_theme .main-menu ul.navbar-nav li.active a.theme-color{
+    color: #ffe162;
+}
+.yellow_color_theme .custom-navbar.top-nav-collapse .main-menu ul.nav.navbar-nav li.active a.theme-color{
+    color: #ffe162;
+   
+}
+.yellow_color_theme .btn.theme-color, .yellow_color_theme a.btn.theme-color{
+    background: #ffe162;
+    color: #000;
+}
+.yellow_color_theme .btn.theme-color.btn-effect.disabled:hover {
+    color: #000;
+}
+
+/*======= end yellow =========*/
+
+/*=========== red ===========*/
+.red_color_theme .main-menu ul.navbar-nav li.active a.theme-color{
+    color: #DC143C;
+}
+.red_color_theme .custom-navbar.top-nav-collapse .main-menu ul.nav.navbar-nav li.active a.theme-color{
+    color: #DC143C;
+   
+}
+.red_color_theme .btn.theme-color, .red_color_theme a.btn.theme-color{
+    background: #DC143C;
+    color: #fff;
+}
+.red_color_theme .btn.theme-color.btn-effect.disabled:hover {
+    color: #fff;
+}
+
+/*=========== end red ===========*/
+
+/*=========== green ===========*/
+.green_color_theme .main-menu ul.navbar-nav li.active a.theme-color{
+    color: #44b272;
+}
+.green_color_theme .custom-navbar.top-nav-collapse .main-menu ul.nav.navbar-nav li.active a.theme-color{
+    color: #44b272;
+   
+}
+.green_color_theme .btn.theme-color, .green_color_theme a.btn.theme-color{
+    background: #44b272;
+    color: #000;
+}
+.green_color_theme .btn.theme-color.btn-effect.disabled:hover {
+    color: #000;
+}
+
+/*=========== end green ===========*/
+
+/*=========== pink ===========*/
+.pink_color_theme .main-menu ul.navbar-nav li.active a.theme-color{
+    color: #D2527F;
+}
+.pink_color_theme .custom-navbar.top-nav-collapse .main-menu ul.nav.navbar-nav li.active a.theme-color{
+    color: #D2527F;
+   
+}
+.pink_color_theme .btn.theme-color, .pink_color_theme a.btn.theme-color{
+    background: #D2527F;
+    color: #fff;
+}
+.pink_color_theme .btn.theme-color.btn-effect.disabled:hover {
+    color: #fff;
+}
+
+/*=========== end pink ===========*/
+
+/*=========== purple ===========*/
+.purple_color_theme .main-menu ul.navbar-nav li.active a.theme-color{
+    color: #663399;
+}
+.purple_color_theme .custom-navbar.top-nav-collapse .main-menu ul.nav.navbar-nav li.active a.theme-color{
+    color: #663399;
+   
+}
+.purple_color_theme .btn.theme-color, .purple_color_theme a.btn.theme-color{
+    background: #663399;
+    color: #fff;
+}
+.purple_color_theme .btn.theme-color.btn-effect.disabled:hover {
+    color: #fff;
+}
+
+/*=========== end purple ===========*/
+
+/*=========== blue ===========*/
+.blue_color_theme .main-menu ul.navbar-nav li.active a.theme-color{
+    color: #304fff;
+}
+.blue_color_theme .custom-navbar.top-nav-collapse .main-menu ul.nav.navbar-nav li.active a.theme-color{
+    color: #304fff;
+   
+}
+.blue_color_theme .btn.theme-color, .blue_color_theme a.btn.theme-color{
+    background: #304fff;
+    color: #fff;
+}
+.blue_color_theme  .btn.theme-color.btn-effect.disabled:hover {
+    color: #fff;
+}
+
+/*=========== end red ===========*/
+
+
+
+/*================================================
+             1 PRELOADER
+==================================================*/
+.preloader {
+    position:fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color:#fff;
+    z-index:9999999;
+}
+.preloader .spinner {
+  left: 50%;
+  margin-left: -20px;
+  margin-top: -20px;
+  position: absolute;
+  top: 50%;
+}
+.spinner {
+  width: 40px;
+  height: 40px;
+  background-color: #333;
+
+  margin: 100px auto;
+  -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
+  animation: sk-rotateplane 1.2s infinite ease-in-out;
+}
+
+@-webkit-keyframes sk-rotateplane {
+  0% { -webkit-transform: perspective(120px) }
+  50% { -webkit-transform: perspective(120px) rotateY(180deg) }
+  100% { -webkit-transform: perspective(120px) rotateY(180deg)  rotateX(180deg) }
+}
+
+@keyframes sk-rotateplane {
+  0% { 
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg) 
+  } 50% { 
+    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg) 
+  } 100% { 
+    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+  }
+}
+
+
+/*================================================
+     2 SECTION TITLE AND SECTION PADDING
+==================================================*/
+.section-title{
+    color: #000;
+    margin-bottom: 65px;
+    display: inline-block;
+    padding-left: 12px;
+}
+.section-title h2{
+    font-size: 28px;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.section-title p{
+    max-width: 600px;
+    font-size: 14px;
+}
+.section-padding{
+    padding: 100px 0;
+}
+
+
+/*================================================
+             3 INTRO SECTION
+==================================================*/
+.intro-section{
+    height: 100%;
+}
+.welcome-area:after, .quotes-area:after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: .7;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+    z-index: -1;
+}
+
+.welcome-area {
+    background: url(../images/intro-bg.jpg); /*** intro-section background image ***/
+    background-size: cover;
+    z-index: 1;
+    position: relative;
+    height: 100%;
+}
+
+
+
+/*================================================
+             a HEADER AREA
+==================================================*/
+.custom-navbar {
+    
+    background: transparent;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+.logo a {
+  color: #fff;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 4px;
+  margin-top: 28px;
+  text-transform: uppercase;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+.logo a:focus {
+    text-decoration: none;
+}
+
+.main-menu{
+    text-transform: uppercase;
+}
+.main-menu ul.navbar-nav{
+    float: right;
+}
+.main-menu ul.nav.navbar-nav li.active{
+    position: relative;
+}
+.main-menu ul.nav.navbar-nav li.active a{
+    
+    
+   
+}
+.main-menu ul.navbar-nav li a{
+    color: #fff;
+    font-weight: 500;
+    font-size: 12px;
+    padding: 30px 13px;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+.main-menu ul.navbar-nav li a:focus {
+    background: none;
+}
+.main-menu ul li:hover a{
+    color: #f9f9f9;
+    background: none;
+}
+.custom-navbar.top-nav-collapse .logo a{
+    color: #fff;
+    margin-top: 20px;
+}
+.custom-navbar.top-nav-collapse .main-menu ul.navbar-nav li a{
+    color: #fff;
+     padding: 22px 13px;
+}
+.custom-navbar.top-nav-collapse .main-menu ul.nav.navbar-nav li.active a{
+    
+   
+}
+
+.custom-navbar.top-nav-collapse {
+    background: #000;
+
+}
+
+
+/*================================================
+             b WELCOME AREA
+==================================================*/
+.welcome-area{
+    height: 100%;
+    position: relative;
+    z-index: 3;
+}
+.welcome-table{
+    display: table;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.welcome-cell{
+    display: table-cell;
+    vertical-align: middle;
+}
+.welcome-text{
+    
+}
+.welcome-text h1{
+    font-size: 110px;
+    color: #fff;
+    margin-bottom: 15px;
+    font-weight: 700;
+    text-transform: capitalize;
+    letter-spacing: 8px;
+}
+
+.welcome-text h3{
+    color: #fff;
+    font-weight: 500;
+    font-size: 20px;
+    text-transform: capitalize;
+    letter-spacing: 3px;
+}
+
+
+
+/*================================================
+             4 ABOUT SECTION
+==================================================*/
+.about-section{
+    background: #f0f0f0;
+}
+.author-image {
+  text-align: center;
+}
+
+.social-icon {
+   margin-top: 10px;
+    margin-left: -5px;
+    text-align: center;
+}
+.social-icon a{
+   width: 32px;
+    height: 32px;
+    color: #000;
+    display: inline-table;
+    text-align: center;
+    font-size: 16px;
+    margin-left: 5px;
+    margin-bottom: 15px;
+}
+.social-icon a i{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.about-text {
+  padding: 20px 0;
+}
+.about-text h3{
+    font-size: 32px;
+    font-weight: 700;
+}
+.about-text p{
+    font-size: 16px;
+    line-height: 28px;
+}
+.about-text .btn{
+     margin-right: 15px;
+    margin-top: 15px;
+}
+.btn, a.btn {
+  border-radius: 48px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 700;
+  height: 48px;
+  letter-spacing: 0.2em;
+  line-height: 48px;
+  overflow: hidden;
+  padding: 0 30px;
+  text-align: center;
+  text-transform: uppercase;
+  -webkit-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+     box-shadow: 0 7px 16px 0 rgba(50, 50, 50, 0.2);
+}
+
+.btn:hover, a.btn:hover, .btn.btn-effect:hover {
+  box-shadow: 0px 16px 22px 0px rgba(50, 50, 50, 0.2);
+  top: -5px;
+}
+
+.btn.extra, a.btn.extra {
+  background: #f0f0f0;
+    color: #000;
+}
+.btn:focus, a.btn:focus {
+    outline: none;
+}
+.btn:hover, a.btn:hover{
+   
+}
+.btn.extra:hover, a.btn.extra:hover{
+    
+}
+
+/*================================================
+            5 SERVICES SECTION
+==================================================*/
+.services-section {
+    
+}
+.service-space{
+    height: 60px;
+}
+.single-service {
+    
+}
+.service-icon{
+    float: left;
+    width: 40px;
+    font-size: 38px;
+    line-height: 0;
+}
+.service-content {
+   margin-left: 55px;
+}
+.service-content h3{
+    text-transform:lowercase;
+    letter-spacing: 1px;
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-weight: 400;
+}
+.service-content p{
+    line-height: 24px;
+}
+
+
+/*================================================
+            6 QUOTES AREA 
+==================================================*/
+.quotes-area{
+   background: url(../images/quotes-bg.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    z-index: 1;
+}
+.quotes-content h3{
+    font-size: 42px;
+    color: #fff;
+    margin-bottom: 25px;
+    font-size: 800;
+}
+.quotes-content p{
+    color: #fff;
+}
+.quotes-content a{
+   
+    margin-top: 25px;
+}
+.quotes-area i.fa.fa-pencil {
+  font-size: 16px;
+  padding-right: 6px;
+}
+
+
+/*================================================
+            7 WORK SECTION
+==================================================*/
+.work-section{
+    
+}
+.single-work {
+    position: relative;
+    margin-bottom: 30px;
+    border-radius: 5px;
+  margin-bottom: 26px;
+  padding: 0;
+  overflow: hidden;
+  top: 0;
+  -webkit-transition: all ease-in-out 0.4s;
+  transition: all ease-in-out 0.4s;
+    
+}
+.single-work a{
+    box-shadow: 0 7px 16px 0 rgba(50, 50, 50, 0.2);
+}
+.single-work:hover {
+  background: #fff;
+  box-shadow: 0px 16px 22px 0px rgba(50, 50, 50, 0.2);
+  top: -5px;
+}
+
+.single-work img {
+  border-radius: 5px;
+    width: 100%;
+}
+
+
+/*================================================
+            8 CONTACT INFO SECTION
+==================================================*/
+.contact-info-section{
+     background: #f0f0f0;
+}
+.contact-form{
+	position:relative;
+}
+.contact-form .form-group{
+	margin-bottom:20px;
+}
+.form-control{
+	padding: 15px;
+	height:auto;
+	box-shadow:none !important;
+	border:none;
+	border-radius:0;
+	background:#fff;
+    border-radius: 5px;
+}
+textarea.form-control{
+	resize:vertical;
+    height: 120px;
+}
+.form-control:focus{
+	border: 0 solid;
+}
+.btn.disabled, .btn[disabled], fieldset[disabled] .btn {
+  box-shadow: none;
+  cursor: not-allowed;
+  opacity: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+.btn.btn-effect.disabled{
+    box-shadow: 0 7px 16px 0 rgba(50, 50, 50, 0.2);
+    cursor: not-allowed;
+}
+.btn.btn-effect.disabled:hover {
+  box-shadow: 0px 16px 22px 0px rgba(50, 50, 50, 0.2);
+  top: -5px;
+}
+.full-adress{
+    margin-left: 40px;
+}
+.contact-padding.col-md-12 {
+  padding: 15px;
+  background: #fff;
+  margin-bottom: 15px;
+    border-radius: 5px;
+}
+.full-adress p.phone, .full-adress p.mail, .full-adress p.adress{
+    position: relative;
+    padding-left: 25px;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000;
+    margin: 0;
+}
+.full-adress p.phone:before, .full-adress p.mail:before, .full-adress p.adress:before{
+    position: absolute;
+    content: "\f041";
+    font-family: "FontAwesome";
+    top: 0;
+    left: 0;
+}
+.full-adress p.phone:before{
+    content: "\f095";
+}
+.full-adress p.mail:before{
+    content: "\f003 ";
+}
+.full-adress p.adress:before{
+    content: "\f041";
+}
+.full-adress p.phone a, .full-adress p.mail a{
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+}
+            
+
+/*================================================
+            9 FOOTER SECTION
+==================================================*/
+.footer{
+    background-color: #fff;
+    padding: 110px 0;
+}
+.footer-text{}
+.footer-text p{
+    font-size: 16px;
+    color: #000;
+    margin-bottom: 0px;
+}
