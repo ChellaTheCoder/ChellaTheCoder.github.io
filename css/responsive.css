@@ -1,10 +1,5 @@
 /**********************************************
 
-Template Name:  Alo - Personal Portfolio Template
-Author: ThemeFusionBD
-Version: 1.0
-Design and Developed by: ThemeFusionBD
-
 NOTE: This is responsive stylesheet of the template, This file contains the styling for various devices like mobile phone, tablet, laptop etc.
 
 *************************************************/
@@ -151,7 +146,7 @@ line-height: 26px;
     margin-bottom: 50px;
 }
 
-    .full-adress {
+.full-adress {
   margin-top: 60px;
     margin-left: 0px;
 }
@@ -179,8 +174,5 @@ line-height: 26px;
 .welcome-text h3 {
     
 }
-
-
-    
 }
 
