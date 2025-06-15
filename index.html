@@ -57,45 +57,44 @@
         </div>
     </div>
 
-    <!--===== HEADER AREA =====-->
-    <header class="header fixed-top">
-        <nav class="navbar navbar-expand-lg" id="navbarNav">
-            <div class="container">
-                <a class="navbar-brand" href="#home">
-                    <span class="brand-text">BPC</span>
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavContent" aria-controls="navbarNavContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="material-icons">menu</span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavContent">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#home">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#about">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#experience">Experience</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#skills">Skills</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#education">Education</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#awards">Awards</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#contact">Contact</a>
-                        </li>
-                    </ul>
-                </div>
+    <!--===== NAVBAR =====-->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home">
+                <span class="brand-text">BPC</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavContent" aria-controls="navbarNavContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavContent">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#experience">Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#education">Education</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item ms-2">
+                        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </li>
+                </ul>
             </div>
-        </nav>
-    </header>
-    <!--===== END HEADER AREA ======-->
+        </div>
+    </nav>
 
     <div id="home"></div>
     <!--===== INTRO SECTION =====-->
@@ -285,6 +284,9 @@
                 <div class="col-lg-6 mb-4" data-aos="fade-up">
                     <div class="education-card">
                         <div class="education-header">
+                            <div class="education-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
                             <h3 class="education-title">Master of Computer Applications</h3>
                             <p class="education-school">Jawaharlal Nehru Technological University</p>
                             <p class="education-date">2012 - 2014, Hyderabad, India</p>
@@ -299,6 +301,9 @@
                 <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="education-card">
                         <div class="education-header">
+                            <div class="education-icon">
+                                <i class="fas fa-university"></i>
+                            </div>
                             <h3 class="education-title">Bachelor of Computer Applications</h3>
                             <p class="education-school">Osmania University</p>
                             <p class="education-date">2009 - 2012, Hyderabad, India</p>
@@ -327,6 +332,9 @@
                 <div class="col-lg-6 mb-4" data-aos="fade-up">
                     <div class="experience-card">
                         <div class="experience-header">
+                            <div class="experience-icon">
+                                <i class="fas fa-code-branch"></i>
+                            </div>
                             <h3 class="experience-title">Lead Software Engineer</h3>
                             <p class="experience-company">Wells Fargo International Solutions Pvt Ltd</p>
                             <p class="experience-date">04/2021 - Present, Hyderabad, India</p>
@@ -346,6 +354,9 @@
                 <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="experience-card">
                         <div class="experience-header">
+                            <div class="experience-icon">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
                             <h3 class="experience-title">Senior Member Technical</h3>
                             <p class="experience-company">ADP Pvt Ltd</p>
                             <p class="experience-date">08/2018 - 03/2021, Hyderabad, India</p>
@@ -366,6 +377,9 @@
                 <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="experience-card">
                         <div class="experience-header">
+                            <div class="experience-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
                             <h3 class="experience-title">Consultant-C</h3>
                             <p class="experience-company">InfecServices (ADP Pvt.Ltd)</p>
                             <p class="experience-date">02/2017 - 07/2018, Hyderabad, India</p>
@@ -386,6 +400,9 @@
                 <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="300">
                     <div class="experience-card">
                         <div class="experience-header">
+                            <div class="experience-icon">
+                                <i class="fas fa-terminal"></i>
+                            </div>
                             <h3 class="experience-title">Senior Software Developer</h3>
                             <p class="experience-company">MetaSoftSolutions Pvt Ltd</p>
                             <p class="experience-date">09/2014 - 01/2017, Hyderabad, India</p>
@@ -839,6 +856,36 @@
     </script>
     <!-- Finally, our custom JS -->
     <script src="js/main.js"></script>
+
+    <!-- Add this before closing body tag -->
+    <script>
+        // Theme toggle functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const themeToggle = document.getElementById('theme-toggle');
+            const themeIcon = themeToggle.querySelector('i');
+            const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+            
+            // Check for saved theme preference or use system preference
+            const savedTheme = localStorage.getItem('theme');
+            const currentTheme = savedTheme || (prefersDarkScheme.matches ? 'dark' : 'light');
+            
+            // Apply theme
+            document.documentElement.setAttribute('data-theme', currentTheme);
+            updateThemeIcon(currentTheme);
+            
+            // Toggle theme on button click
+            themeToggle.addEventListener('click', () => {
+                const newTheme = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+                document.documentElement.setAttribute('data-theme', newTheme);
+                localStorage.setItem('theme', newTheme);
+                updateThemeIcon(newTheme);
+            });
+            
+            function updateThemeIcon(theme) {
+                themeIcon.className = theme === 'light' ? 'fas fa-moon' : 'fas fa-sun';
+            }
+        });
+    </script>
 </body>
 
 <!-- Mirrored from programmerhasan.com/demos/alo/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 02 Sep 2017 15:59:55 GMT -->
