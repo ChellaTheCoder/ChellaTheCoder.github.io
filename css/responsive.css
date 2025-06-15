@@ -5,113 +5,406 @@ NOTE: This is responsive stylesheet of the template, This file contains the styl
 *************************************************/
 
 /* Medium Layout: 1280px. */
-@media only screen and (min-width: 992px) and (max-width: 1200px) { 
-  
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    .section-title {
+        font-size: 32px;
+    }
     
+    .service-card,
+    .contact-card,
+    .skill-card,
+    .award-card,
+    .interest-card {
+        padding: 30px;
+    }
+    
+    .timeline-content {
+        width: calc(50% - 30px);
+    }
+    
+    .navbar-nav .nav-link {
+        padding: 8px 12px;
+        font-size: 15px;
+    }
+    
+    .home-title {
+        font-size: 60px;
+    }
+    
+    .hero-content .title {
+        font-size: 42px;
+    }
+    
+    .hero-content .subtitle {
+        font-size: 22px;
+    }
+    
+    .home-description {
+        font-size: 17px;
+    }
 }
+
 /* Tablet Layout: 768px. */
-@media only screen and (min-width: 768px) and (max-width: 991px) { 
-  .welcome-text h1 {
-  font-size: 80px;
-}  
-.about-text {
-  margin-top: 40px;
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .section {
+        padding: 80px 0;
+    }
+    
+    .section-title {
+        font-size: 28px;
+    }
+    
+    .service-card,
+    .contact-card,
+    .skill-card,
+    .award-card,
+    .interest-card {
+        padding: 25px;
+    }
+    
+    .service-icon,
+    .contact-icon,
+    .skill-icon-wrapper,
+    .award-icon {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .service-icon i,
+    .contact-icon i,
+    .skill-icon,
+    .award-icon i {
+        font-size: 28px;
+    }
+    
+    .education-timeline::before {
+        left: 30px;
+    }
+    
+    .timeline-dot {
+        left: 30px;
+    }
+    
+    .timeline-content {
+        width: calc(100% - 80px);
+        margin-left: 80px !important;
+    }
+    
+    .timeline-item:nth-child(even) .timeline-content {
+        margin-left: 80px !important;
+    }
+    
+    .navbar {
+        padding: 15px 0;
+    }
+    
+    .navbar.scrolled {
+        padding: 10px 0;
+    }
+    
+    .navbar-brand {
+        font-size: 22px;
+    }
+    
+    .navbar-collapse {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+        margin-top: 10px;
+    }
+    
+    .navbar-nav {
+        margin: 0;
+    }
+    
+    .navbar-nav .nav-item {
+        margin: 5px 0;
+    }
+    
+    .navbar-nav .nav-link {
+        padding: 12px 20px;
+        text-align: center;
+    }
+    
+    .intro-section {
+        padding-top: 70px;
+    }
+    
+    .hero-content {
+        padding: 40px 0;
+    }
+    
+    .home-title {
+        font-size: 48px;
+    }
+    
+    .hero-content .title {
+        font-size: 36px;
+    }
+    
+    .hero-content .subtitle {
+        font-size: 20px;
+    }
+    
+    .home-description {
+        font-size: 16px;
+        padding: 0 20px;
+    }
+    
+    .social-link {
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+    }
 }
 
-.full-adress {
-    margin-top: 60px;
-    margin-left: 0px;
+/* Mobile Layout: 767px. */
+@media only screen and (max-width: 767px) {
+    .section {
+        padding: 60px 0;
+    }
+    
+    .section-title {
+        font-size: 24px;
+    }
+    
+    .section-subtitle {
+        font-size: 16px;
+    }
+    
+    .service-card,
+    .contact-card,
+    .skill-card,
+    .award-card,
+    .interest-card {
+        padding: 20px;
+        margin-bottom: 30px;
+    }
+    
+    .service-icon,
+    .contact-icon,
+    .skill-icon-wrapper,
+    .award-icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .service-icon i,
+    .contact-icon i,
+    .skill-icon,
+    .award-icon i {
+        font-size: 24px;
+    }
+    
+    .service-title,
+    .contact-card h3,
+    .skill-title,
+    .award-title,
+    .interest-card h3 {
+        font-size: 20px;
+    }
+    
+    .service-description,
+    .contact-card p,
+    .skill-category,
+    .award-issuer {
+        font-size: 14px;
+    }
+    
+    .social-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .availability-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .status-indicator {
+        margin: 0 auto 15px;
+    }
+    
+    .education-timeline::before {
+        left: 20px;
+    }
+    
+    .timeline-dot {
+        left: 20px;
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
+    }
+    
+    .timeline-content {
+        width: calc(100% - 60px);
+        margin-left: 60px !important;
+        padding: 20px;
+    }
+    
+    .timeline-item:nth-child(even) .timeline-content {
+        margin-left: 60px !important;
+    }
+    
+    .timeline-header h3 {
+        font-size: 20px;
+    }
+    
+    .timeline-header .company,
+    .timeline-header .duration {
+        font-size: 14px;
+    }
+    
+    .skill-level {
+        font-size: 14px;
+    }
+    
+    .skill-progress {
+        height: 6px;
+    }
+    
+    .skill-tag {
+        font-size: 12px;
+        padding: 4px 12px;
+    }
+    
+    .navbar {
+        padding: 12px 0;
+    }
+    
+    .navbar.scrolled {
+        padding: 8px 0;
+    }
+    
+    .navbar-brand {
+        font-size: 20px;
+    }
+    
+    .navbar-toggler {
+        width: 25px;
+        height: 25px;
+    }
+    
+    .navbar-toggler .icon-bar {
+        height: 2px;
+        margin: 5px 0;
+    }
+    
+    .navbar-collapse {
+        padding: 15px;
+        margin-top: 8px;
+    }
+    
+    .navbar-nav .nav-link {
+        padding: 10px 15px;
+        font-size: 15px;
+    }
+    
+    .intro-section {
+        padding-top: 60px;
+        min-height: calc(100vh - 60px);
+    }
+    
+    .hero-content {
+        padding: 30px 0;
+    }
+    
+    .home-title {
+        font-size: 36px;
+    }
+    
+    .hero-content .title {
+        font-size: 28px;
+    }
+    
+    .hero-content .subtitle {
+        font-size: 18px;
+    }
+    
+    .home-description {
+        font-size: 15px;
+        padding: 0 15px;
+    }
+    
+    .social-link {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+    
+    .shape-1 {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .shape-2 {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .shape-3 {
+        width: 100px;
+        height: 100px;
+    }
 }
 
+/* Wide Mobile Layout: 480px. */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    .section-title {
+        font-size: 26px;
+    }
     
+    .service-card,
+    .contact-card,
+    .skill-card,
+    .award-card,
+    .interest-card {
+        padding: 25px;
+    }
     
+    .service-icon,
+    .contact-icon,
+    .skill-icon-wrapper,
+    .award-icon {
+        width: 65px;
+        height: 65px;
+    }
     
+    .service-icon i,
+    .contact-icon i,
+    .skill-icon,
+    .award-icon i {
+        font-size: 26px;
+    }
+    
+    .navbar-brand {
+        font-size: 22px;
+    }
+    
+    .navbar-collapse {
+        padding: 20px;
+    }
+    
+    .home-title {
+        font-size: 42px;
+    }
+    
+    .hero-content .title {
+        font-size: 32px;
+    }
+    
+    .hero-content .subtitle {
+        font-size: 20px;
+    }
+    
+    .home-description {
+        font-size: 16px;
+    }
 }
-/* Mobile Layout lower than: 320px. */
-@media only screen and (max-width: 767px) { 
-    
 
-/* HEADER AREA */  
-.custom-navbar{
-    padding: 12px 0;
-    -webkit-transition: all 0.4s ease-in-out;
-    transition: all 0.4s ease-in-out;
-    background: #000;
-}
-.logo a{
-    margin-top: 10px;
-    -webkit-transition: all 0.4s ease-in-out;
-    transition: all 0.4s ease-in-out;
-}
-.main-menu ul.navbar-nav {
-    float: left;
-}
-.main-menu ul.navbar-nav li a{
-    padding: 10px 5px;
-}
-.main-menu ul.nav.navbar-nav li.active:before{
-    display: none;
-}
-.navbar-collapse {
-  border-top: 1px solid transparent;
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4) inset;
-  margin-top: 15px;
-}
-
-  .navbar-toggle {
-  float: none;
-  margin: 0;
-  padding: 9px;
-  -webkit-transition: all 0.4s ease-in-out 0s;
-  transition: all 0.4s ease-in-out 0s;
-}
-    .navbar-header .navbar-toggle .icon-bar {
-  background: none repeat scroll 0 0 #fff;
-}
-.navbar-header {
-    display: inline-block;
-    float: right;
-    margin-top: 6px;
-    -webkit-transition: all 0.4s ease-in-out;
-    transition: all 0.4s ease-in-out;
-}
-.custom-navbar.top-nav-collapse .main-menu ul.navbar-nav li a{padding: 10px 5px;}
-.custom-navbar.top-nav-collapse .navbar-collapse {
-  border-top: 1px solid transparent;
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4) inset;
-  margin-top: 15px;
-}
-.custom-navbar.top-nav-collapse .navbar-toggle{
-    float: none;
-    margin: 0;
-    padding: 9px;
-    -webkit-transition: all 0.4s ease-in-out;
-    transition: all 0.4s ease-in-out;
-}
-    .custom-navbar.top-nav-collapse .navbar-toggle .icon-bar {
-  background: none repeat scroll 0 0 #fff;
-}
-    .custom-navbar.top-nav-collapse .logo a {
-  color: #fff;
-  margin-top: 6px;
-}
-   .custom-navbar.top-nav-collapse .navbar-header {
-  
-  margin-top: 0;
-}
-    .custom-navbar.top-nav-collapse {
-  padding: 12px 0;
-}
-.mobile-menu-activated ul.nav.navbar-nav{}
-.mobile-menu-activated ul.nav.navbar-nav li{display: block;text-align: left;}
-.mobile-menu-activated ul.nav.navbar-nav li a{}
-.main-menu ul.navbar-nav{
-    text-align: left !important;
-    display: block;
-}
-    
-    
-    
 .welcome-text h1 {
   font-size: 32px;
 }
@@ -160,19 +453,5 @@ line-height: 26px;
     }
     
     
-}
-
-
-/* Wide Mobile Layout: 480px. */
-@media only screen and (min-width: 480px) and (max-width: 767px) { 
-    
-.mobile-menu-activated ul.nav.navbar-nav li a{padding: 10px 5px;}
-    
-.welcome-text h1 {
-    font-size: 55px;
-}
-.welcome-text h3 {
-    
-}
 }
 

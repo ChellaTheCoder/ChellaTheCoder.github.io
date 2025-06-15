@@ -1,442 +1,847 @@
-    <!DOCTYPE html>
-    <html lang="en">
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
 
-    <!-- Mirrored from programmerhasan.com/demos/alo/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 02 Sep 2017 15:59:33 GMT -->
+<!-- Mirrored from programmerhasan.com/demos/alo/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 02 Sep 2017 15:59:33 GMT -->
 
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Bhanu Prakash Chella - Lead Software Engineer Portfolio">
 
-        <title>Bhanu Prakash Chella</title>
+    <title>Chella The Coder - Portfolio</title>
 
-        <!-- Favicon -->
-        <link rel="shortcut icon" href="images/favicon.png" type="image/png">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="images/favicon.png" type="image/png">
 
-        <!--==== CSS ====-->
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/font-awesome.min.css" rel="stylesheet">
-        <link href="css/magnific-popup.css" rel="stylesheet">
-        <link href="css/animate.min.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
 
-        <!--==== CUSTOM CSS ====-->
-        <link href="css/style.css" rel="stylesheet">
-        <link href="css/responsive.css" rel="stylesheet">
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
 
-        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-        <!--[if lt IE 9]>
-        <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-        <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-        <![endif]-->
-    </head>
+    <!-- Preloader Script -->
+    <script>
+        // Immediately hide preloader if page is already loaded
+        if (document.readyState === 'complete') {
+            document.documentElement.classList.add('loaded');
+        }
+    </script>
+</head>
 
-    <body>
+<body>
 
+    <!--===== Preloader =====-->
+    <div id="preloader" class="preloader">
+        <div class="loader-content">
+            <div class="loader-text">BPC</div>
+            <div class="loader-bar"></div>
+        </div>
+    </div>
 
-        <!--==== DEMO COLOR PANEL ===-->
-        <div class="demo_panel_box">
-            <div class="color_panel_box">
-                <div class="spiner_button slide_in_out"><i class="fa fa-cog fa-spin"></i></div>
-                <span class="red_color"></span>
-                <span class="blue_color"></span>
-                <span class="yellow_color"></span>
-                <span class="purple_color"></span>
-                <span class="pink_color"></span>
-                <span class="green_color"></span>
+    <!--===== HEADER AREA =====-->
+    <header class="header fixed-top">
+        <nav class="navbar navbar-expand-lg" id="navbarNav">
+            <div class="container">
+                <a class="navbar-brand" href="#home">
+                    <span class="brand-text">BPC</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavContent" aria-controls="navbarNavContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="material-icons">menu</span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavContent">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#experience">Experience</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#skills">Skills</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#education">Education</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#awards">Awards</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!--===== END HEADER AREA ======-->
+
+    <div id="home"></div>
+    <!--===== INTRO SECTION =====-->
+    <section class="intro-section section-padding" id="home">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="hero-content text-center" data-aos="fade-up">
+                        <div class="section-title mb-4">
+                            <h2 class="title">Welcome to My Portfolio</h2>
+                            <p class="subtitle">Full Stack Engineer</p>
+                        </div>
+                        <h1 class="home-title">
+                            Hi, I'm <span>Bhanu Prakash Chella</span>
+                        </h1>
+                        <p class="home-description">
+                            A passionate Full Stack Developer with expertise in building robust and scalable web applications. 
+                            I love turning complex problems into simple, beautiful, and intuitive solutions.
+                        </p>
+                        <div class="home-social">
+                            <a href="https://github.com/ChellaTheCoder" target="_blank" class="social-link" aria-label="GitHub Profile">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://linkedin.com/in/bhanu-prakash-chella" target="_blank" class="social-link" aria-label="LinkedIn Profile">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://twitter.com/bhanurpl" target="_blank" class="social-link" aria-label="Twitter Profile">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <!--==== DEMO COLOR PANEL ===-->
-
-        <!--===== Preloader ====-->
-        <div class="preloader">
-            <div class="spinner"></div>
+        <div class="hero-background">
+            <div class="hero-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
         </div>
+    </section>
+    <!--=====************* END INTRO SECTION ***************=====-->
 
 
-        <div id="home"></div>
-        <!--=====************** INTRO SECTION **************=====-->
-        <div class="intro-section" id="intro-bg">
-
-            <!--===== HEADER AREA =====-->
-            <header class="navbar custom-navbar navbar-fixed-top">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-2 col-sm-2 col-xs-12">
-                            <div class="logo">
-                                <div class="navbar-header">
-                                    <button type="button" class="navbar-toggle" data-toggle="collapse"
-                                        data-target=".navbar-collapse">
-                                        <span class="sr-only">Toggle navigation</span>
-                                        <span class="icon-bar"></span>
-                                        <span class="icon-bar"></span>
-                                        <span class="icon-bar"></span>
-                                    </button>
-                                </div>
-                                <a href="#home">Bhanu</a>
-                                <!--== logo ==-->
-                            </div>
-                        </div>
-
-                        <div class="col-md-10 col-sm-10 col-xs-12">
-                            <nav class="main-menu">
-                                <div class="navbar-collapse collapse">
-                                    <ul class="nav navbar-nav">
-                                        <!--== manin menu ==-->
-                                        <li class="active smooth-scroll"><a class="theme-color" href="#home">Home</a>
-                                        </li>
-                                        <li class="smooth-scroll"><a class="theme-color" href="#about">About</a></li>
-                                        <li class="smooth-scroll"><a class="theme-color" href="#services">Skills</a>
-                                        </li>
-                                        <li class="smooth-scroll"><a class="theme-color" href="#work">Work</a></li>
-                                        <li class="smooth-scroll"><a class="theme-color" href="#contact">Coffee</a></li>
-                                    </ul>
-                                </div>
-                            </nav>
-                        </div>
-                    </div>
-                    <!--/.row-->
-                </div>
-                <!--/.container-->
-            </header>
-            <!--===== END HEADER AREA ======-->
-
-
-            <!--======= WELCOME AREA =======-->
-            <div class="welcome-area" data-stellar-background-ratio="0.6">
-                <div class="welcome-table">
-                    <div class="welcome-cell">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-12 col-sm-12 col-xs-12">
-                                    <div class="welcome-text">
-                                        <h1>Bhanu Prakash Chella</h1>
-                                        <h3>Professional Fullstack Javascript Engineer</h3>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--/.row-->
-                        </div>
-                        <!--/.container-->
+    <!--===== ABOUT SECTION =====-->
+    <section class="about-section section-padding" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-title text-center" data-aos="fade-up">
+                        <h2 class="title">About Me</h2>
+                        <p class="subtitle">Get to know me better</p>
                     </div>
                 </div>
             </div>
-            <!--===== END WELCOME AREA =====-->
-
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="about-image-wrapper">
+                        <img src="images/author.jpg" alt="Profile Image" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="about-content">
+                        <div class="section-title mb-4">
+                            <h2 class="title">Its Me</h2>
+                            <p class="subtitle">In short</p>
+                        </div>
+                        <div class="about-text">
+                            <p>My journey in web development started over 11 years ago, and since then, I've worked on various projects ranging from small business websites to complex web applications. I believe in continuous learning and staying updated with the latest technologies and best practices.</p>
+                            <p>As a Full Stack Engineer, I specialize in building robust and scalable applications using modern technologies. My expertise includes both frontend and backend development, with a strong focus on creating efficient, maintainable, and user-friendly solutions.</p>
+                        </div>
+                        <div class="about-stats">
+                            <div class="stat-item">
+                                <span class="stat-value">11+</span>
+                                <span class="stat-label">Years</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">30+</span>
+                                <span class="stat-label">Projects</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">10+</span>
+                                <span class="stat-label">Innovations</span>
+                            </div>
+                        </div>
+                        <div class="about-skills">
+                            <span class="skill-tag">Full Stack</span>
+                            <span class="skill-tag">UI/UX</span>
+                            <span class="skill-tag">Responsive</span>
+                            <span class="skill-tag">Problem Solver</span>
+                        </div>
+                        <div class="about-cta">
+                            <a href="#contact" class="btn btn-primary">
+                                <i class="fas fa-paper-plane"></i>
+                                Contact Me
+                            </a>
+                            <a href="#skills" class="btn btn-outline">
+                                <i class="fas fa-briefcase"></i>
+                                View Skills
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <!--=====************* END INTRO SECTION ***************=====-->
+    </section>
+    <!--=====*********** END ABOUT SECTION **************=====-->
 
 
-        <!--=====************** ABOUT SECTION ***************=====-->
-        <section id="about" class="about-section section-padding">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="author-image wow fadeInUp" data-wow-delay="0.4s">
-                            <img src="images/author.jpg" alt="Author Image">
-                            <!--=== author image ===-->
-                        </div>
-                    </div>
-
-                    <div class="col-md-8">
-                        <div class="about-text wow fadeInUp" data-wow-delay="0.6s">
-                            <h3>Hello, that's me!</h3>
-                            <p>I am a full-stack JavaScript engineer with over 9 years of experience in the IT industry, specializing in developing applications for both mobile and web platforms. As a former member of the CSI-Hyderabad chapter, I have actively contributed to organizations such as C-DAC, NASSCOM, and CSI. My expertise includes conducting seminars on cyber security, big data, and other trending technologies, as well as participating in numerous cyber security conferences. I currently volunteer at the Cyberabad Security Council in Telangana, where I focus on enhancing information security awareness through training programs for students and the community.
-
-Additionally, I am proud to have won the NASSCOM-TechNgage first prize worth 3 lac for my mobile application in Hackthon-2016.</p>
-                            <p>Apart from all these i am writing a journal on Advanced Face Recoginition Technologies.
-                            </p>
-                            <a class="btn theme-color" href="files" download><i class="fa fa-download"></i> download
-                                resume</a>
-                            <a class="scroll-btn btn extra" href="#work">see work</a>
-                        </div>
-                    </div>
-                </div>
-                <!--/.row-->
+    <!--===== SERVICES SECTION =====-->
+    <section class="services-section section" id="services">
+        <div class="container">
+            <div class="section-header text-center" data-aos="fade-up">
+                <span class="section-tag">Services</span>
+                <h2 class="section-title">What I can do for you</h2>
+                <p class="section-subtitle">Professional services tailored to your needs</p>
             </div>
-            <!--/.container-->
-        </section>
-        <!--=====*********** END ABOUT SECTION **************=====-->
-
-
-        <!--======**************** SERVICES SECTION ******************=======-->
-        <section id="services" class="services-section section-padding">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 col-sm-12 col-xs-12">
-                        <div class="section-title">
-                            <h2>What i do.</h2>
-                            <p>Designing,developing,testing and deploying</p>
+            <div class="row g-4">
+                <!-- Web Development -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-code"></i>
                         </div>
+                        <h3 class="service-title">Web Development</h3>
+                        <p class="service-description">Custom web applications built with modern technologies and best practices.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Responsive Design</li>
+                            <li><i class="fas fa-check"></i> Modern Frameworks</li>
+                            <li><i class="fas fa-check"></i> Performance Optimization</li>
+                            <li><i class="fas fa-check"></i> Cross-browser Compatibility</li>
+                        </ul>
                     </div>
                 </div>
-                <div class="row wow fadeInUp" data-wow-delay="0.4s">
-                    <div class="row">
-                        <div class="col-md-4 col-sm-4">
-                            <div class="single-service text-left">
-                                <div class="skills-content">
-                                    <img src="images/intrests.png">
-                                </div>
-                            </div>
+                <!-- Mobile Development -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-mobile-alt"></i>
                         </div>
-                        <div class="col-md-4 col-sm-4">
-                            <div class="single-service text-left">
-                                <div class="skills-content">
-                                    <img src="images/core.png">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-4">
-                            <div class="single-service text-left">
-                                <div class="skills-content">
-                                    <img src="images/modern web.png">
-                                </div>
-                            </div>
-                        </div>
-                    </div><br><br>
-                    <div class="col-md-4 col-sm-4">
-                        <div class="single-service text-left">
-                            <div class="service-icon">
-                                <i class="fa fa-code"></i>
-                            </div>
-                            <div class="service-content">
-                                <h3>WEB <strong>DESIGN</strong></h3>
-                                <p>Web design encompasses many different skills and disciplines in the production and
-                                    maintenance of websites.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-4">
-                        <div class="single-service text-left">
-                            <div class="service-icon">
-                                <i class="fa fa-laptop"></i>
-                            </div>
-                            <div class="service-content">
-                                <h3>WEB <strong>development</strong></h3>
-                                <p>Web development is a broad term for the work involved in developing a web site for
-                                    the Internet (World Wide Web) or an intranet (a private network).</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-4">
-                        <div class="single-service text-left">
-                            <div class="service-icon">
-                                <i class="fa fa-arrows"></i>
-                            </div>
-                            <div class="service-content">
-                                <h3><strong>Responsive</strong> Design</h3>
-                                <p>Responsive Web design is the approach that suggests that design and development
-                                    should respond to the user's behavior and environment based on screen size, platform
-                                    and orientation.</p>
-                            </div>
-                        </div>
+                        <h3 class="service-title">Mobile Development</h3>
+                        <p class="service-description">Native and cross-platform mobile applications for iOS and Android.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> React Native</li>
+                            <li><i class="fas fa-check"></i> Native iOS/Android</li>
+                            <li><i class="fas fa-check"></i> PWA Development</li>
+                            <li><i class="fas fa-check"></i> App Store Optimization</li>
+                        </ul>
                     </div>
                 </div>
-                <!--/.row-->
-                <div class="service-space"></div>
-                <div class="row wow fadeInUp" data-wow-delay="0.6s">
-                    <div class="col-md-4 col-sm-4">
-                        <div class="single-service text-left">
-                            <div class="service-icon">
-                                <i class="fa fa-mobile"></i>
-                            </div>
-                            <div class="service-content">
-                                <h3>mobile <strong>application</strong></h3>
-                                <p>A mobile application, most commonly referred to as an app, is a type of application
-                                    software designed to run on a mobile device, such as a smartphone or tablet
-                                    computer.</p>
-                            </div>
+                <!-- Backend Development -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-server"></i>
                         </div>
-                    </div>
-                    <div class="col-md-4 col-sm-4">
-                        <div class="single-service text-left">
-                            <div class="service-icon">
-                                <i class="fa fa-filter"></i>
-                            </div>
-                            <div class="service-content">
-                                <h3><strong>SEO</strong> Freindly</h3>
-                                <p>Search engine optimization (SEO) is the process of affecting the visibility of a
-                                    website or a web page in a web search engine's unpaid results—often referred to as
-                                    "natural", "organic", or "earned" results.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-4">
-                        <div class="single-service text-left">
-                            <div class="service-icon">
-                                <i class="fa fa-umbrella"></i>
-                            </div>
-                            <div class="service-content">
-                                <h3><strong>Support</strong></h3>
-                                <p>Any kind of support available in 24/7.</p>
-                            </div>
-                        </div>
+                        <h3 class="service-title">Backend Development</h3>
+                        <p class="service-description">Robust and scalable backend solutions using modern technologies.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Node.js/Express</li>
+                            <li><i class="fas fa-check"></i> RESTful APIs</li>
+                            <li><i class="fas fa-check"></i> Database Design</li>
+                            <li><i class="fas fa-check"></i> Cloud Integration</li>
+                        </ul>
                     </div>
                 </div>
-                <!--/.row-->
             </div>
-            <!--/.container-->
-        </section>
-        <!--======*************** END SERVICES SECTION ****************=======-->
-
-
-
-        <!--QUOTES AREA-->
-        <div class="quotes-area section-padding">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="quotes-content text-center">
-                            <h3>Let's work together!</h3>
-                            <p>I am available for freelance projects.</p>
-                            <a class="scroll-btn btn theme-color" href="#contact"><i class="fa fa-pencil"></i>Get
-                                Quotes</a>
-                        </div>
-                    </div>
-                </div>
-                <!--/.row-->
-            </div>
-            <!--/.container-->
         </div>
-        <!--END QUOTES AREA-->
+    </section>
+    <!--=====************* END SERVICES SECTION ***************=====-->
 
 
-        <!--======********** WORK SECTION *********======-->
-        <section id="work" class="work-section section-padding">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 col-sm-12 col-xs-12">
-                        <div class="section-title">
-                            <h2>Recent work & Gallery.</h2>
-                            <p>Mobile applications and prizes/achivements</p>
-                        </div>
+    <!--===== EDUCATION SECTION =====-->
+    <section class="education-section section-padding" id="education">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-title text-center" data-aos="fade-up">
+                        <h2 class="title">Education</h2>
+                        <p class="subtitle">My academic background</p>
                     </div>
                 </div>
-
-                <div class="row wow fadeInUp" data-wow-delay="0.4s">
-                    <div class="col-md-4 col-sm-4">
-                        <div class="single-work">
-                            <a href="images/portfolio/item1.jpg" class="image-popup">
-                                <img src="images/portfolio/item1.jpg" alt="">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-4">
-                        <div class="single-work">
-                            <a href="images/portfolio/item2.jpg" class="image-popup">
-                                <img src="images/portfolio/item2.jpg" alt="">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-4">
-                        <div class="single-work">
-                            <a href="images/portfolio/item3.jpg" class="image-popup">
-                                <img src="images/portfolio/item3.jpg" alt="">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="row wow fadeInUp" data-wow-delay="0.6s">
-                    <div class="col-md-4 col-sm-4">
-                        <div class="single-work">
-                            <a href="images/portfolio/item4.jpg" class="image-popup">
-                                <img src="images/portfolio/item4.jpg" alt="">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-4">
-                        <div class="single-work">
-                            <a href="images/portfolio/item5.jpg" class="image-popup">
-                                <img src="images/portfolio/item5.jpg" alt="">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-4">
-                        <div class="single-work">
-                            <a href="images/portfolio/item6.jpg" class="image-popup">
-                                <img src="images/portfolio/item6.jpg" alt="">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!--/.row-->
             </div>
-            <!--/.container-->
-        </section>
-        <!--======************ END PORTFOLIO SECTION **************======-->
-
-
-        <!--======******************** CONTACT INFO SECTION **********************======-->
-        <section id="contact" class="contact-info-section section-padding">
-            <div class="container">
-                <div class="">
-                    <div class="col-md-12 col-sm-12 col-xs-12">
-                        <div class="section-title">
-                            <h2>Coffee with me.</h2>
-                            <div>I am always excited to work on some awesome projects, email me <strong>bhanurpl@gmail.com</strong> and
-                                let's discuss over coffee</div>
+            <div class="row">
+                <!-- Masters -->
+                <div class="col-lg-6 mb-4" data-aos="fade-up">
+                    <div class="education-card">
+                        <div class="education-header">
+                            <h3 class="education-title">Master of Computer Applications</h3>
+                            <p class="education-school">Jawaharlal Nehru Technological University</p>
+                            <p class="education-date">2012 - 2014, Hyderabad, India</p>
                         </div>
-                        <!-- <div class="full-adress">
-                            <div class="contact-padding col-md-12">
-                                <p class="mail">Email: <a href="mailto:bhanurpl@gmail.com">bhanurpl@gmail.com</a></p>
-                            </div>
-                        </div> -->
+                        <div class="education-description">
+                            <p>Specialized in Computer Applications with focus on software development and programming.</p>
+                        </div>
                     </div>
                 </div>
-<!--                 <div class="col-md-12 col-sm-12 col-xs-12">
-                    <div class="twitter-feed">
-                        <a class="twitter-timeline" href="https://twitter.com/BhanuChellas" data-tweet-limit="3">
+
+                <!-- Bachelors -->
+                <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="education-card">
+                        <div class="education-header">
+                            <h3 class="education-title">Bachelor of Computer Applications</h3>
+                            <p class="education-school">Osmania University</p>
+                            <p class="education-date">2009 - 2012, Hyderabad, India</p>
+                        </div>
+                        <div class="education-description">
+                            <p>Focused on computer science fundamentals, programming, and software development.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--===== EXPERIENCE SECTION =====-->
+    <section class="experience-section section-padding" id="experience">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-title text-center" data-aos="fade-up">
+                        <h2 class="title">Work Experience</h2>
+                        <p class="subtitle">My professional journey</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Wells Fargo -->
+                <div class="col-lg-6 mb-4" data-aos="fade-up">
+                    <div class="experience-card">
+                        <div class="experience-header">
+                            <h3 class="experience-title">Lead Software Engineer</h3>
+                            <p class="experience-company">Wells Fargo International Solutions Pvt Ltd</p>
+                            <p class="experience-date">04/2021 - Present, Hyderabad, India</p>
+                        </div>
+                        <div class="experience-description">
+                            <ul class="timeline-list">
+                                <li>Designed and developed user-centric front-end applications, ensuring seamless functionality and exceptional user experience.</li>
+                                <li>Mentored and coached junior developers, fostering a culture of continuous learning and innovation.</li>
+                                <li>Collaborated with product managers, designers, and cross-functional teams to define project requirements, prioritize tasks, and deliver results within strict deadlines.</li>
+                                <li>Conducted live application testing and implemented updates to align with evolving user trends.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ADP -->
+                <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="experience-card">
+                        <div class="experience-header">
+                            <h3 class="experience-title">Senior Member Technical</h3>
+                            <p class="experience-company">ADP Pvt Ltd</p>
+                            <p class="experience-date">08/2018 - 03/2021, Hyderabad, India</p>
+                        </div>
+                        <div class="experience-description">
+                            <ul class="timeline-list">
+                                <li>Researched similar application designs and user interface modules.</li>
+                                <li>Created website and application design mockups with enhanced UI features.</li>
+                                <li>Presented updated front-end designs for final sign-off.</li>
+                                <li>Ensured web design is optimized for responsive screens.</li>
+                                <li>Utilized a variety of markup languages to write web pages.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- InfecServices -->
+                <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="experience-card">
+                        <div class="experience-header">
+                            <h3 class="experience-title">Consultant-C</h3>
+                            <p class="experience-company">InfecServices (ADP Pvt.Ltd)</p>
+                            <p class="experience-date">02/2017 - 07/2018, Hyderabad, India</p>
+                        </div>
+                        <div class="experience-description">
+                            <ul class="timeline-list">
+                                <li>Developed features to enhance the user experience.</li>
+                                <li>Struck a balance between functional and aesthetic design.</li>
+                                <li>Ensured web design is optimized for responsive screens.</li>
+                                <li>Built reusable code for future use.</li>
+                                <li>Optimized web pages for maximum speed and scalability.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MetaSoftSolutions -->
+                <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="experience-card">
+                        <div class="experience-header">
+                            <h3 class="experience-title">Senior Software Developer</h3>
+                            <p class="experience-company">MetaSoftSolutions Pvt Ltd</p>
+                            <p class="experience-date">09/2014 - 01/2017, Hyderabad, India</p>
+                        </div>
+                        <div class="experience-description">
+                            <ul class="timeline-list">
+                                <li>Prepared Functional specification based on System Requirement Specification.</li>
+                                <li>Implemented component as per Functional Specification.</li>
+                                <li>Communicated with customer and vendor for various changes during development and support.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--===== Skills Section =====-->
+    <section id="skills" class="section skills-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-title text-center" data-aos="fade-up">
+                        <h2 class="title">Skills</h2>
+                        <p class="subtitle">My technical expertise</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-4">
+                <!-- Frontend Development -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="skill-card">
+                        <div class="skill-icon-wrapper">
+                            <i class="fas fa-code skill-icon"></i>
+                        </div>
+                        <span class="skill-category">Frontend Development</span>
+                        <h3 class="skill-title">Web Technologies</h3>
+                        
+                        <div class="skill-level">
+                            <span class="skill-name">HTML5/CSS3</span>
+                            <span class="skill-percentage">95%</span>
+                        </div>
+                        <div class="skill-progress">
+                            <div class="skill-progress-bar" style="width: 95%"></div>
+                        </div>
+
+                        <div class="skill-level">
+                            <span class="skill-name">JavaScript</span>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                        <div class="skill-progress">
+                            <div class="skill-progress-bar" style="width: 90%"></div>
+                        </div>
+
+                        <div class="skill-level">
+                            <span class="skill-name">React.js</span>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                        <div class="skill-progress">
+                            <div class="skill-progress-bar" style="width: 85%"></div>
+                        </div>
+
+                        <div class="skill-tags">
+                            <span class="skill-tag">HTML5</span>
+                            <span class="skill-tag">CSS3</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">React</span>
+                            <span class="skill-tag">Bootstrap</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Backend Development -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="skill-card">
+                        <div class="skill-icon-wrapper">
+                            <i class="fas fa-server skill-icon"></i>
+                        </div>
+                        <span class="skill-category">Backend Development</span>
+                        <h3 class="skill-title">Server Technologies</h3>
+                        
+                        <div class="skill-level">
+                            <span class="skill-name">Node.js</span>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                        <div class="skill-progress">
+                            <div class="skill-progress-bar" style="width: 90%"></div>
+                        </div>
+
+                        <div class="skill-level">
+                            <span class="skill-name">Python</span>
+                            <span class="skill-percentage">85%</span>
+                        </div>
+                        <div class="skill-progress">
+                            <div class="skill-progress-bar" style="width: 85%"></div>
+                        </div>
+
+                        <div class="skill-level">
+                            <span class="skill-name">SQL</span>
+                            <span class="skill-percentage">80%</span>
+                        </div>
+                        <div class="skill-progress">
+                            <div class="skill-progress-bar" style="width: 80%"></div>
+                        </div>
+
+                        <div class="skill-tags">
+                            <span class="skill-tag">Node.js</span>
+                            <span class="skill-tag">Express</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">SQL</span>
+                            <span class="skill-tag">MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tools & Others -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="skill-card">
+                        <div class="skill-icon-wrapper">
+                            <i class="fas fa-tools skill-icon"></i>
+                        </div>
+                        <span class="skill-category">Tools & Others</span>
+                        <h3 class="skill-title">Development Tools</h3>
+                        
+                        <div class="skill-level">
+                            <span class="skill-name">Git</span>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                        <div class="skill-progress">
+                            <div class="skill-progress-bar" style="width: 90%"></div>
+                        </div>
+
+                        <div class="skill-level">
+                            <span class="skill-name">Docker</span>
+                            <span class="skill-percentage">85%</span>
+                        </div>
+                        <div class="skill-progress">
+                            <div class="skill-progress-bar" style="width: 85%"></div>
+                        </div>
+
+                        <div class="skill-level">
+                            <span class="skill-name">AWS</span>
+                            <span class="skill-percentage">80%</span>
+                        </div>
+                        <div class="skill-progress">
+                            <div class="skill-progress-bar" style="width: 80%"></div>
+                        </div>
+
+                        <div class="skill-tags">
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">AWS</span>
+                            <span class="skill-tag">CI/CD</span>
+                            <span class="skill-tag">Linux</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--===== AWARDS SECTION =====-->
+    <section class="awards-section section-padding" id="awards">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-title text-center" data-aos="fade-up">
+                        <h2 class="title">Awards & Certifications</h2>
+                        <p class="subtitle">My achievements and recognition</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-4">
+                <!-- AWS Certification -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                    <div class="award-card">
+                        <div class="award-icon">
+                            <i class="fab fa-aws"></i>
+                        </div>
+                        <h3 class="award-title">AWS Certified Solutions Architect</h3>
+                        <p class="award-description">Professional certification in designing distributed systems on AWS.</p>
+                        <div class="award-details">
+                            <div class="detail-item">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>Issued: 2023</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-award"></i>
+                                <span>Credential ID: AWS-542863</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Microsoft Certification -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="award-card">
+                        <div class="award-icon">
+                            <i class="fab fa-microsoft"></i>
+                        </div>
+                        <h3 class="award-title">Microsoft Certified: Azure Developer Associate</h3>
+                        <p class="award-description">Expertise in developing solutions using Microsoft Azure services.</p>
+                        <div class="award-details">
+                            <div class="detail-item">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>Issued: 2023</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-award"></i>
+                                <span>Credential ID: MS-789012</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Google Certification -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="award-card">
+                        <div class="award-icon">
+                            <i class="fab fa-google"></i>
+                        </div>
+                        <h3 class="award-title">Google Cloud Professional Developer</h3>
+                        <p class="award-description">Advanced certification in Google Cloud Platform development.</p>
+                        <div class="award-details">
+                            <div class="detail-item">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>Issued: 2023</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-award"></i>
+                                <span>Credential ID: GCP-345678</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <!-- Innovation Award -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="award-card">
+                        <div class="award-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3 class="award-title">Innovation Excellence Award</h3>
+                        <p class="award-description">Awarded for innovative solutions in enterprise applications.</p>
+                        <div class="award-details">
+                            <div class="detail-item">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>Awarded: 2022</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-building"></i>
+                                <span>Global Tech Summit</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+               
+                <!-- Nasscom TechNgage -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up">
+                    <div class="award-card">
+                        <div class="award-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <h3 class="award-title">Nasscom TechNgage Winner</h3>
+                        <p class="award-issuer">Nasscom TechNgage Hackathon</p>
+                        <div class="detail-item">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>Awarded: 2016</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-building"></i>
+                            <span>Nasscom Hyderabad Chapter</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Death By Hackathon -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="award-card">
+                        <div class="award-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <h3 class="award-title">Death By Hackathon Winner</h3>
+                        <p class="award-issuer">Death By Hackathon</p>
+                        <div class="detail-item">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>Awarded: 2019</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-building"></i>
+                            <span>Azmour Hyderabad</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--===== Interests Section =====-->
+    <section id="interests" class="section">
+        <div class="container">
+            <div class="section-header text-center" data-aos="fade-up">
+                <span class="section-tag">Interests</span>
+                <h2 class="section-title">Areas of Interest</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4 col-sm-6" data-aos="fade-up">
+                    <div class="interest-card">
+                        <i class="material-icons">phone_android</i>
+                        <h3>Mobile Apps</h3>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="interest-card">
+                        <i class="material-icons">chat</i>
+                        <h3>Chat Bots</h3>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="interest-card">
+                        <i class="material-icons">memory</i>
+                        <h3>V8 Engine</h3>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6" data-aos="fade-up">
+                    <div class="interest-card">
+                        <i class="material-icons">science</i>
+                        <h3>Tech Spaces</h3>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="interest-card">
+                        <i class="material-icons">analytics</i>
+                        <h3>Data Science</h3>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="interest-card">
+                        <i class="material-icons">psychology</i>
+                        <h3>AI/ML</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--===== CONTACT SECTION =====-->
+    <section class="contact-section section" id="contact">
+        <div class="container">
+            <div class="section-header text-center" data-aos="fade-up">
+                <span class="section-tag">Contact</span>
+                <h2 class="section-title">Get in Touch</h2>
+                <p class="section-subtitle">Let's discuss your project and see how I can help</p>
+            </div>
+            <div class="row g-4">
+                <!-- Email -->
+                <div class="col-md-4" data-aos="fade-up">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>Email</h3>
+                        <p>Let's talk about your project</p>
+                        <a href="mailto:bhanurpl@gmail.com" class="contact-link">
+                            bhanurpl@gmail.com
+                            <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
-                </div> -->
-
-            </div>
-            <!--/.row-->
-            </div>
-            <!--/.container-->
-        </section>
-        <!--======**************** END CONTACT INFO SECTION ********************======-->
-
-
-
-        <!--======******************* FOOTER SECTION ******************======-->
-        <footer class="footer">
-            <div class="container">
-                <div class="row wow fadeInUp" data-wow-delay="0.4s">
-                    <div class="col-md-12 text-center">
-                        <img src="images/signature (1).png">
-                        <!-- With <i class="fa fa-heart"></i> lov/e -->
-                        <div class="footer-text">
-                            <p>&copy;2020 All Rights Reserved</p>
+                </div>
+                <!-- Location -->
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
                         </div>
-                        <div class="social-icon">
-                            <!--=== author social icons ===-->
-                            <a href="https://www.facebook.com/chella.bhanuprakash" title="facebook" target="_blank"><i
-                                    class="fa fa-facebook"></i></a>
-                            <a href="https://twitter.com/bhanuchellas" title="twitter" target="_blank"><i
-                                    class="fa fa-twitter"></i></a>
-                            <a href="https://github.com/ChellaTheCoder" title="github" target="_blank"><i
-                                    class="fa fa-github"></i></a>
-                            <a href="https://www.linkedin.com/in/bhanu-prakash-5b293992/" title="linkedin"
-                                target="_blank"><i class="fa fa-linkedin"></i></a>
+                        <h3>Location</h3>
+                        <p>Based in Hyderabad, India</p>
+                        <a href="https://www.google.com/maps/place/Hyderabad,+Telangana" target="_blank" class="contact-link">
+                            View on Map
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Social -->
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-share-alt"></i>
+                        </div>
+                        <h3>Social</h3>
+                        <p>Connect with me online</p>
+                        <div class="social-links">
+                            <a href="https://github.com/ChellaTheCoder" target="_blank" class="social-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://linkedin.com/in/bhanu-prakash-chella" target="_blank" class="social-link">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://twitter.com/bhanurpl" target="_blank" class="social-link">
+                                <i class="fab fa-twitter"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
-        </footer>
-        <!--======******************* END FOOTER SECTION ***************======-->
 
+            <!-- Availability Status -->
+            <div class="availability-section" data-aos="fade-up" data-aos-delay="300">
+                <div class="availability-card">
+                    <div class="status-indicator"></div>
+                    <div class="availability-content">
+                        <h3>Currently Available</h3>
+                        <p>Open to new opportunities and collaborations</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!--===== FOOTER AREA =====-->
+    <footer class="footer-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <div class="copyright">
+                        <p>&copy; 2025 Bhanu Prakash Chella. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--===== END FOOTER AREA =====-->
 
-        <!--===== JAVASCRIPT FILES =====-->
-        <script src="js/jquery-2.1.4.min.js"></script>
-        <script src="js/jquery.stellar.min.js"></script>
-        <script src="js/wow.min.js"></script>
-        <script src="js/validator.min.js"></script>
-        <script src="js/plugins.js"></script>
-        <script src="js/magnific-popup-options.js"></script>
-        <script src="js/main.js"></script>
-    </body>
+    <!--===== JavaScript Files =====-->
+    <!-- Load jQuery first -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- jQuery Validation Plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+    <!-- Then Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Then AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Then WOW.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <!-- Initialize AOS -->
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    </script>
+    <!-- Finally, our custom JS -->
+    <script src="js/main.js"></script>
+</body>
 
-    <!-- Mirrored from programmerhasan.com/demos/alo/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 02 Sep 2017 15:59:55 GMT -->
+<!-- Mirrored from programmerhasan.com/demos/alo/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 02 Sep 2017 15:59:55 GMT -->
 
-    </html>
+</html>
+
