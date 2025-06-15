@@ -142,12 +142,12 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
     --gradient-primary: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
     /* Dark theme */
     --text-primary: #ffffff;
-    --text-secondary: rgba(255, 255, 255, 0.9);
+    --text-secondary: #e0e0e0;
     --bg-card: rgba(255, 255, 255, 0.1);
     --gradient-home-light: linear-gradient(135deg, #1a1a1a 0%, #2d3436 100%);
     --gradient-home-dark: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
     --home-text-primary: #ffffff;
-    --home-text-secondary: rgba(255, 255, 255, 0.9);
+    --home-text-secondary: #e0e0e0;
     --home-bg-card: rgba(255, 255, 255, 0.1);
     --home-border-color: rgba(255, 255, 255, 0.2);
 }
@@ -251,6 +251,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
     font-size: 18px;
     max-width: 600px;
     margin: 0 auto;
+    opacity: 0.9;
 }
 
 /*================================================
@@ -342,9 +343,9 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--card-bg);
+    background: var(--bg-light);
     border-radius: 50%;
-    color: var(--text-color);
+    color: var(--primary-color);
     font-size: 20px;
     transition: all 0.3s ease;
     backdrop-filter: blur(5px);
@@ -363,47 +364,36 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
     border-color: transparent;
 }
 
-.social-link i {
-    position: relative;
-    z-index: 2;
-    transition: all 0.3s ease;
+/* Update social link styles for light theme */
+[data-theme="light"] .social-link {
+    background: var(--bg-light);
+    color: var(--primary-color);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Specific icon colors on hover */
-.social-link[aria-label="GitHub Profile"]:hover {
-    background: #333;
+[data-theme="light"] .social-link:hover {
+    background: var(--gradient-primary);
+    color: #ffffff;
+    border-color: transparent;
+    box-shadow: 0 5px 15px rgba(var(--primary-rgb), 0.3);
 }
 
-.social-link[aria-label="LinkedIn Profile"]:hover {
-    background: #0077b5;
+/* Specific icon colors for light theme */
+[data-theme="light"] .social-link[aria-label="GitHub Profile"] {
+    color: #333333;
 }
 
-.social-link[aria-label="Twitter Profile"]:hover {
-    background: #1da1f2;
+[data-theme="light"] .social-link[aria-label="LinkedIn Profile"] {
+    color: #0077b5;
 }
 
-.social-link[aria-label="Instagram Profile"]:hover {
-    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+[data-theme="light"] .social-link[aria-label="Twitter Profile"] {
+    color: #1da1f2;
 }
 
-.social-link[aria-label="YouTube Channel"]:hover {
-    background: #ff0000;
-}
-
-.social-link[aria-label="Email Me"]:hover {
-    background: #ea4335;
-}
-
-/* Ensure icons are visible in dark mode */
-.social-link i {
-    color: #fff;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-/* Add hover effect for the icon */
-.social-link:hover i {
-    color: #fff;
-    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+[data-theme="light"] .social-link:hover {
+    color: #ffffff;
 }
 
 .hero-background {
@@ -505,10 +495,25 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 }
 
 .about-text {
+    font-size: 18px;
     color: var(--text-light);
-    font-size: 16px;
     line-height: 1.8;
     margin-bottom: 30px;
+}
+
+.about-text p {
+    color: var(--text-light);
+    margin-bottom: 20px;
+}
+
+.about-text p:last-child {
+    margin-bottom: 0;
+}
+
+[data-theme="dark"] .about-text,
+[data-theme="dark"] .about-text p {
+    color: var(--text-secondary);
+    opacity: 0.95;
 }
 
 .about-cta {
@@ -760,14 +765,38 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 
 .service-features li {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     margin-bottom: 10px;
     color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.6;
 }
 
 .service-features li i {
     color: var(--primary-color);
     margin-right: 10px;
+    margin-top: 4px;
+    flex-shrink: 0;
+}
+
+/* Update service-features in education cards */
+.education-card .service-features {
+    margin-top: 10px;
+}
+
+.education-card .service-features li {
+    margin-bottom: 0;
+    font-size: 0.95rem;
+}
+
+[data-theme="dark"] .service-features li {
+    color: var(--text-secondary);
+    opacity: 0.95;
+}
+
+[data-theme="dark"] .service-features li i {
+    color: var(--primary-color);
+    opacity: 1;
 }
 
 /*================================================
@@ -1081,8 +1110,6 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
     height: 100%;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative;
-    overflow: hidden;
 }
 
 .education-card:hover {
@@ -1100,7 +1127,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 .education-title {
     font-size: 1.4rem;
     font-weight: 600;
-    color: var(--text-primary);
+    color: var(--text-color);
     margin: 0;
 }
 
@@ -1118,9 +1145,36 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 }
 
 .education-description {
+    font-size: 18px;
+    color: var(--text-light);
+    line-height: 1.8;
+    margin-top: 20px;
+}
+
+.education-description p {
+    color: var(--text-light);
+    margin-bottom: 0;
+}
+
+[data-theme="dark"] .education-description,
+[data-theme="dark"] .education-description p {
     color: var(--text-secondary);
-    line-height: 1.6;
-    margin: 0;
+    opacity: 0.95;
+}
+
+/* Update education card styles for dark theme */
+[data-theme="dark"] .education-card {
+    background: var(--bg-light);
+    border: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] .education-title {
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .education-date {
+    color: var(--text-secondary);
+    opacity: 0.9;
 }
 
 /* Education Card Icon Styles */
@@ -1573,19 +1627,43 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
     animation: pulse 2s infinite;
 }
 
-.availability-text {
+.availability-content {
     flex: 1;
 }
 
-.availability-text h4 {
-    font-size: 20px;
-    margin-bottom: 5px;
+.availability-content h3 {
     color: var(--text-color);
+    font-size: 1.2rem;
+    margin-bottom: 5px;
 }
 
-.availability-text p {
+.availability-content p {
     color: var(--text-secondary);
     margin: 0;
+    font-size: 0.95rem;
+}
+
+/* Update copyright styles to match availability-content */
+.copyright {
+    padding: 20px 0;
+    text-align: center;
+}
+
+.copyright p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin: 0;
+    opacity: 0.95;
+}
+
+[data-theme="dark"] .copyright p {
+    color: var(--text-secondary);
+    opacity: 0.95;
+}
+
+/* Remove old copyright styles */
+.footer-area .copyright p {
+    font-size: 14px;
 }
 
 /*================================================
@@ -2195,20 +2273,24 @@ body {
 }
 
 .home-social {
-    margin-top: 40px;
     display: flex;
-    gap: 15px;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease forwards 0.8s;
 }
 
 .social-link {
     width: 45px;
     height: 45px;
-    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--card-bg);
-    color: var(--text-color);
+    background: var(--bg-light);
+    border-radius: 50%;
+    color: var(--primary-color);
     font-size: 20px;
     transition: all 0.3s ease;
     backdrop-filter: blur(5px);
@@ -2225,6 +2307,38 @@ body {
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(var(--primary-rgb), 0.3);
     border-color: transparent;
+}
+
+/* Update social link styles for light theme */
+[data-theme="light"] .social-link {
+    background: var(--bg-light);
+    color: var(--primary-color);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .social-link:hover {
+    background: var(--gradient-primary);
+    color: #ffffff;
+    border-color: transparent;
+    box-shadow: 0 5px 15px rgba(var(--primary-rgb), 0.3);
+}
+
+/* Specific icon colors for light theme */
+[data-theme="light"] .social-link[aria-label="GitHub Profile"] {
+    color: #333333;
+}
+
+[data-theme="light"] .social-link[aria-label="LinkedIn Profile"] {
+    color: #0077b5;
+}
+
+[data-theme="light"] .social-link[aria-label="Twitter Profile"] {
+    color: #1da1f2;
+}
+
+[data-theme="light"] .social-link:hover {
+    color: #ffffff;
 }
 
 /* Responsive Styles for Home Section */
@@ -2280,5 +2394,130 @@ body {
         width: 35px;
         height: 35px;
         font-size: 1rem;
+    }
+}
+
+/* Update section styles for better dark theme visibility */
+.section-header .section-title {
+    color: var(--text-color);
+}
+
+.section-header .section-subtitle {
+    color: var(--text-secondary);
+}
+
+.section-tag {
+    color: #ffffff;
+    background: var(--gradient-primary);
+}
+
+/* Update service card styles */
+.service-card .service-title {
+    color: var(--text-color);
+}
+
+.service-card .service-description {
+    color: var(--text-secondary);
+}
+
+/* Update contact card styles */
+.contact-card h3 {
+    color: var(--text-color);
+}
+
+.contact-card p {
+    color: var(--text-secondary);
+}
+
+/* Update availability card styles */
+.availability-card h3 {
+    color: var(--text-color);
+}
+
+.availability-card p {
+    color: var(--text-secondary);
+}
+
+/* Update interest card styles */
+.interest-card h3 {
+    color: var(--text-color);
+}
+
+/* Update service-features in about section */
+.about-text .service-features {
+    margin: 0;
+    padding: 0;
+}
+
+.about-text .service-features li {
+    margin-bottom: 15px;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+}
+
+.about-text .service-features li:last-child {
+    margin-bottom: 0;
+}
+
+.about-text .service-features li i {
+    color: var(--primary-color);
+    margin-right: 12px;
+    margin-top: 6px;
+    flex-shrink: 0;
+}
+
+[data-theme="dark"] .about-text .service-features li {
+    color: var(--text-secondary);
+    opacity: 0.95;
+}
+
+[data-theme="dark"] .about-text .service-features li i {
+    color: var(--primary-color);
+    opacity: 1;
+}
+
+/* Remove old about-text styles */
+.about-text {
+    margin-bottom: 30px;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.social-links .social-link {
+    width: 40px;
+    height: 40px;
+    min-width: 40px; /* Prevent shrinking */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-light);
+    border-radius: 50%;
+    color: var(--primary-color);
+    font-size: 18px;
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .social-links {
+        gap: 10px;
+    }
+    
+    .social-links .social-link {
+        width: 35px;
+        height: 35px;
+        min-width: 35px;
+        font-size: 16px;
     }
 }
